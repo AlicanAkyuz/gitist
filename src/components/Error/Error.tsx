@@ -1,9 +1,11 @@
-import { hot } from 'react-hot-loader/root';
 import React, { FunctionComponent, Fragment } from 'react';
 
-//import Routes from './routes';
+// type Props = JSX.IntrinsicElements['button'] & {
+//   primary?: boolean;
+//   secondary?: boolean;
+// };
 
-const App: FunctionComponent = () => (
+const Error: FunctionComponent = () => (
   <Fragment>
     <header>Header</header>
     {/* <Routes /> */}
@@ -11,4 +13,4 @@ const App: FunctionComponent = () => (
   </Fragment>
 );
 
-export default hot(App);
+export default Error;

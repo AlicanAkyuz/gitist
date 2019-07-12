@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import '../../scss/styles.css';
 
 import cleanUpTurkishChars from '../../utils/cleanUpTurkishChars';
-import handleScroll from '../../utils/handleScroll';
+import handleUserScroll from '../../utils/handleUserScroll';
 
 interface Data {
   locations: [
@@ -24,9 +24,9 @@ interface Data {
   onLoadMore(): object;
 }
 
-const Location: FunctionComponent<Data> = ({ locations, onLoadMore }) => {
+const LocationList: FunctionComponent<Data> = ({ locations, onLoadMore }) => {
   useEffect(() => {
-    window.addEventListener('scroll', () => handleScroll(onLoadMore));
+    window.addEventListener('scroll', () => handleUserScroll(onLoadMore));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -62,4 +62,4 @@ const Location: FunctionComponent<Data> = ({ locations, onLoadMore }) => {
   );
 };
 
-export default Location;
+export default LocationList;

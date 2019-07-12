@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Location from './Location';
+import DeveloperList from './DeveloperList';
 
 // it('renders correctly primary button', () => {
 //   const wrapper = shallow(<Developers primary>Primary Developers</Button>);

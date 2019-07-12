@@ -4,6 +4,5 @@ import App from './App';
 
 it('runs correctly', () => {
   const wrapper = shallow(<App />);
-
   expect(wrapper).toMatchSnapshot();
 });

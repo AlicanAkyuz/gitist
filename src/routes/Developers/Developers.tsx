@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react';
 import { Query } from 'react-apollo';
 import { GET_DEVELOPERS } from '../../queries';
 
-import Developer from '../../components/Developer';
+import DeveloperList from '../../components/DeveloperList';
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
 
@@ -48,7 +48,7 @@ const Developers: FunctionComponent = () => {
         let offset = 0;
         const { location } = data;
         return (
-          <Developer
+          <DeveloperList
             location={location}
             onLoadMore={async () => {
               offset = offset + 5;

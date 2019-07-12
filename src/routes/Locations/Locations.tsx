@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react';
 import { Query } from 'react-apollo';
 import { GET_LOCATIONS } from '../../queries';
 
-import Location from '../../components/Location';
+import LocationList from '../../components/LocationList';
 import Loading from '../../components/Loading';
 import Error from '../../components/Error';
 
@@ -44,7 +44,7 @@ const Locations: React.FunctionComponent = () => (
       let offset = 0;
       const { locations } = data;
       return (
-        <Location
+        <LocationList
           locations={locations}
           onLoadMore={async () => {
             offset = offset + 5;

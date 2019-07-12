@@ -1,6 +1,6 @@
 type onLoadMoreCallback = () => object;
 
-const handleScroll = (onLoadMore: onLoadMoreCallback) => {
+const handleUserScroll = (onLoadMore: onLoadMoreCallback) => {
   if (
     document.documentElement.clientHeight + document.documentElement.scrollTop >=
     document.documentElement.scrollHeight
@@ -9,4 +9,4 @@ const handleScroll = (onLoadMore: onLoadMoreCallback) => {
   }
 };
 
-export default handleScroll;
+export default handleUserScroll;

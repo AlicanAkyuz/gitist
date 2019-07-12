@@ -1,7 +1,7 @@
 import React, { FunctionComponent, Fragment, useEffect } from 'react';
 import '../../scss/styles.css';
 
-import handleScroll from '../../utils/handleScroll';
+import handleUserScroll from '../../utils/handleUserScroll';
 
 interface Data {
   location: {
@@ -21,9 +21,9 @@ interface Data {
   onLoadMore(): object;
 }
 
-const Developer: FunctionComponent<Data> = ({ location, onLoadMore }) => {
+const DeveloperList: FunctionComponent<Data> = ({ location, onLoadMore }) => {
   useEffect(() => {
-    window.addEventListener('scroll', () => handleScroll(onLoadMore));
+    window.addEventListener('scroll', () => handleUserScroll(onLoadMore));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -49,4 +49,4 @@ const Developer: FunctionComponent<Data> = ({ location, onLoadMore }) => {
     </Fragment>
   );
 };
-export default Developer;
+export default DeveloperList;

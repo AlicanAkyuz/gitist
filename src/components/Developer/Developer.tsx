@@ -1,4 +1,7 @@
-import React, { FunctionComponent, Fragment } from 'react';
+import React, { FunctionComponent, Fragment, useEffect } from 'react';
+import '../../scss/styles.css';
+
+import handleScroll from '../../utils/handleScroll';
 
 interface Data {
   location: {
@@ -15,28 +18,35 @@ interface Data {
       },
     ];
   };
+  onLoadMore(): object;
 }
 
-const Developer: FunctionComponent<Data> = ({ location }) => (
-  <Fragment>
-    <div className="city-info">
-      <h1>{location.name}</h1>
-      <h4>Şehir Türkiye Sıralaması: {location.stats.rank}</h4>
-    </div>
+const Developer: FunctionComponent<Data> = ({ location, onLoadMore }) => {
+  useEffect(() => {
+    window.addEventListener('scroll', () => handleScroll(onLoadMore));
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-    <ul className="developer-list">
-      {location.developers.map((dev, idx) => {
-        return (
-          <li key={idx}>
-            <img src={dev.avatarUrl} alt={`${dev.name}'s avatarı`} />
-            <h1>{dev.name}</h1>
-            <h4>Star Sayısı: {dev.totalStarred}</h4>
-            <h4>Takipçi Sayısı: {dev.followers}</h4>
-          </li>
-        );
-      })}
-    </ul>
-  </Fragment>
-);
+  return (
+    <Fragment>
+      <div className="city-info">
+        <h1>{location.name}</h1>
+        <h4>Şehir Türkiye Sıralaması: {location.stats.rank}</h4>
+      </div>
 
+      <ul className="developer-list">
+        {location.developers.map((dev, idx) => {
+          return (
+            <li key={idx}>
+              <img src={dev.avatarUrl} alt={`${dev.name}'s avatarı`} />
+              <h1>{dev.name}</h1>
+              <h4>Star Sayısı: {dev.totalStarred}</h4>
+              <h4>Takipçi Sayısı: {dev.followers}</h4>
+            </li>
+          );
+        })}
+      </ul>
+    </Fragment>
+  );
+};
 export default Developer;

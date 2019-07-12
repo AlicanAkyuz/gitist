@@ -46,20 +46,25 @@ const Locations: React.FunctionComponent = () => (
       return (
         <Location
           locations={locations}
-          onLoadMore={() => {
+          onLoadMore={async () => {
             offset = offset + 5;
-            return fetchMore({
-              variables: { offset },
-              updateQuery: (prev, { fetchMoreResult }) => {
-                if (!fetchMoreResult) return prev;
-                let newData = JSON.parse(JSON.stringify(prev));
-                newData.locations = Object.assign(
-                  [],
-                  [...prev.locations, ...fetchMoreResult.locations],
-                );
-                return newData;
-              },
-            });
+            try {
+              await fetchMore({
+                variables: { offset },
+                updateQuery: (prev, { fetchMoreResult }) => {
+                  if (!fetchMoreResult) return prev;
+                  let newData = JSON.parse(JSON.stringify(prev));
+                  newData.locations = Object.assign(
+                    [],
+                    [...prev.locations, ...fetchMoreResult.locations],
+                  );
+                  return newData;
+                },
+              });
+            } catch (err) {
+              console.log('err');
+              // When the variables of <Query> changes while a fetchMore is still in progress, we get this error: ObservableQuery with this id does not exist: id on unmounted component, which is an open issue: https://github.com/apollographql/apollo-client/issues/4114
+            }
           }}
         />
       );

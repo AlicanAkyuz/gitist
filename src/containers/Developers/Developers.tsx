@@ -26,7 +26,7 @@ interface Data {
 interface Variables {
   slug: string | null;
   limit: number;
-  offset: number;
+  offset: number | [];
   orderBy: object;
 }
 
@@ -43,10 +43,35 @@ const Developers: FunctionComponent = () => {
       }}
     >
       {({ data, loading, error, fetchMore }) => {
-        if (loading || !data) return <Loading />;
         if (error) return <Error />;
+        if (loading || !data) return <Loading />;
+        let offset = 0;
         const { location } = data;
-        return <Developer location={location} />;
+        return (
+          <Developer
+            location={location}
+            onLoadMore={async () => {
+              offset = offset + 5;
+              try {
+                await fetchMore({
+                  variables: { offset },
+                  updateQuery: (prev, { fetchMoreResult }) => {
+                    if (!fetchMoreResult) return prev;
+                    let newData = JSON.parse(JSON.stringify(prev));
+                    newData.location.developers = Object.assign(
+                      [],
+                      [...prev.location.developers, ...fetchMoreResult.location.developers],
+                    );
+                    return newData;
+                  },
+                });
+              } catch (err) {
+                console.log('err');
+                // When the variables of <Query> changes while a fetchMore is still in progress, we get this error: ObservableQuery with this id does not exist: id on unmounted component, which is an open issue: https://github.com/apollographql/apollo-client/issues/4114
+              }
+            }}
+          />
+        );
       }}
     </Query>
   );

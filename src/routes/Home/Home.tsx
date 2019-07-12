@@ -1,12 +1,11 @@
-import React, { FunctionComponent } from 'react';
-import { Link } from 'react-router-dom';
+import React, { FunctionComponent, Fragment } from 'react';
+
+import Locations from '../../containers/Locations';
 
 const Home: FunctionComponent = () => (
-  <div>
-    <h1>Home page</h1>
-
-    <Link to="/feed">Go to feed</Link>
-  </div>
+  <Fragment>
+    <Locations />
+  </Fragment>
 );
 
 export default Home;

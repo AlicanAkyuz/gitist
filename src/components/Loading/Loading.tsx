@@ -1,16 +1,5 @@
-import React, { FunctionComponent, Fragment } from 'react';
+import React, { FunctionComponent } from 'react';
 
-// type Props = JSX.IntrinsicElements['button'] & {
-//   primary?: boolean;
-//   secondary?: boolean;
-// };
-
-const Loading: FunctionComponent = () => (
-  <Fragment>
-    <header>Header</header>
-    {/* <Routes /> */}
-    <footer>Footer</footer>
-  </Fragment>
-);
+const Loading: FunctionComponent = () => <p>Yükleniyor...</p>;
 
 export default Loading;

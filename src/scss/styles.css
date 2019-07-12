@@ -1,0 +1,180 @@
+html {
+  background-color: #fff;
+  scroll-behavior: smooth;
+}
+
+html .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 5rem;
+  color: #f6f6f6;
+  font-family: Verdana, monospace;
+  font-size: 2.25rem;
+  font-weight: 800;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 1px solid #f6f6f6;
+  background-color: #414a4c;
+}
+
+html ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 0;
+  margin-top: 7rem;
+  margin-left: 0;
+  list-style-type: none;
+}
+
+html ul li {
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
+  list-style-type: none;
+  text-align: center;
+}
+
+html ul .button-text {
+  padding: 0.7rem;
+  border: none;
+  background-color: #fff;
+  border-radius: 0.4rem;
+  color: #3b444b;
+  cursor: pointer;
+  font-family: Courier;
+  font-size: 2rem;
+  font-weight: 400;
+  outline: none;
+  text-decoration: none;
+}
+
+html ul .button-text:hover {
+  background-color: #fff;
+  color: #232b2b;
+}
+
+html ul h1 {
+  color: #f6f6f6;
+  font-family: Verdana, monospace;
+  font-size: 2.25rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #3b444b;
+  font-size: 1.6rem;
+}
+
+html ul h4 {
+  color: #3b444b;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+html ul button {
+  padding: 0.7rem;
+  border: none;
+  background-color: #414a4c;
+  border-radius: 0.4rem;
+  color: #f6f6f6;
+  cursor: pointer;
+  font-family: Courier;
+  font-size: 1rem;
+  font-weight: 400;
+  outline: none;
+  text-decoration: none;
+}
+
+html ul button:hover {
+  background-color: #f6f6f6;
+  color: #414a4c;
+}
+
+html ul img {
+  width: 10rem;
+  height: auto;
+  border-radius: 80%;
+}
+
+html .city-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-top: 5rem;
+}
+
+html .city-info h1 {
+  color: #f6f6f6;
+  font-family: Verdana, monospace;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #3b444b;
+}
+
+html .city-info h4 {
+  color: #3b444b;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 0;
+}
+
+html .developer-list {
+  margin-top: 2rem;
+}
+
+html p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: center;
+          flex-direction: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #3b444b;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 10rem;
+  font-size: 2.5rem;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,45 @@
+@import './variables';
+
+@mixin flex-custom($direction, $align, $justify) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin width-height-custom($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin title-font-set() {
+  color: $primary-text-color;
+  font-family: $primary-font;
+  font-size: 2.25rem;
+  font-weight: 800;
+}
+
+@mixin content-font-set() {
+  color: $secondary-text-color;
+  font-family: $secondary-font;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+@mixin button-custom($backgroundColor, $color, $fontSize) {
+  padding: 0.7rem;
+  border: none;
+  background-color: $backgroundColor;
+  border-radius: 0.4rem;
+  color: $color;
+  cursor: pointer;
+  font-family: Courier;
+  font-size: $fontSize;
+  font-weight: 400;
+  outline: none;
+  text-decoration: none;
+}
+@mixin button-hover-custom($backgroundColor, $color) {
+  background-color: $backgroundColor;
+  color: $color;
+}

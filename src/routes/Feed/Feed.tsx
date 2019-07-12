@@ -1,12 +1,11 @@
-import React, { FunctionComponent } from 'react';
-import { Link } from 'react-router-dom';
+import React, { FunctionComponent, Fragment } from 'react';
+
+import Developers from '../../containers/Developers';
 
 const Feed: FunctionComponent = () => (
-  <div>
-    <h1>Feed</h1>
-
-    <Link to="/">Go to home</Link>
-  </div>
+  <Fragment>
+    <Developers />
+  </Fragment>
 );
 
 export default Feed;

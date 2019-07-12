@@ -1,16 +1,5 @@
-import React, { FunctionComponent, Fragment } from 'react';
+import React, { FunctionComponent } from 'react';
 
-// type Props = JSX.IntrinsicElements['button'] & {
-//   primary?: boolean;
-//   secondary?: boolean;
-// };
-
-const Error: FunctionComponent = () => (
-  <Fragment>
-    <header>Header</header>
-    {/* <Routes /> */}
-    <footer>Footer</footer>
-  </Fragment>
-);
+const Error: FunctionComponent = () => <p>Bir sorun oluştu!</p>;
 
 export default Error;

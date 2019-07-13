@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar corrently renders a header with title 1`] = `
+<header
+  className="navbar"
+>
+  Gitist
+</header>
+`;

@@ -3,14 +3,7 @@ import { shallow } from 'enzyme';
 
 import Developers from './Developers';
 
-// it('renders correctly primary button', () => {
-//   const wrapper = shallow(<Developers primary>Primary Developers</Button>);
-
-//   expect(wrapper).toMatchSnapshot();
-// });
-
-// it('renders correctly secondary button', () => {
-//   const wrapper = shallow(<Button secondary>Secondary Button</Button>);
-
-//   expect(wrapper).toMatchSnapshot();
-// });
+it('Developers corrently renders a navbar and Routes component', () => {
+  const wrapper = shallow(<Developers />);
+  expect(wrapper).toMatchSnapshot();
+});

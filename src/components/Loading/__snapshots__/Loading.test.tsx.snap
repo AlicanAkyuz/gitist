@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading corrently renders a loading message 1`] = `
+<p>
+  Yükleniyor...
+</p>
+`;

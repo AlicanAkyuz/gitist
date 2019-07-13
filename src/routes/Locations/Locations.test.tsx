@@ -3,14 +3,7 @@ import { shallow } from 'enzyme';
 
 import Locations from './Locations';
 
-// it('renders correctly primary button', () => {
-//   const wrapper = shallow(<Developers primary>Primary Developers</Button>);
-
-//   expect(wrapper).toMatchSnapshot();
-// });
-
-// it('renders correctly secondary button', () => {
-//   const wrapper = shallow(<Button secondary>Secondary Button</Button>);
-
-//   expect(wrapper).toMatchSnapshot();
-// });
+it('Locations corrently renders a navbar and Routes component', () => {
+  const wrapper = shallow(<Locations />);
+  expect(wrapper).toMatchSnapshot();
+});

@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error corrently renders an error message 1`] = `
+<p>
+  Bir sorun oluştu!
+</p>
+`;

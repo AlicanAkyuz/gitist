@@ -51,8 +51,8 @@ const Developers: FunctionComponent = () => {
           <DeveloperList
             location={location}
             onLoadMore={async () => {
-              offset = offset + 5;
               try {
+                offset = offset + 5;
                 await fetchMore({
                   variables: { offset },
                   updateQuery: (prev, { fetchMoreResult }) => {

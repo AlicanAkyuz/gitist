@@ -3,14 +3,7 @@ import { shallow } from 'enzyme';
 
 import Loading from './Loading';
 
-// it('renders correctly primary button', () => {
-//   const wrapper = shallow(<Developers primary>Primary Developers</Button>);
-
-//   expect(wrapper).toMatchSnapshot();
-// });
-
-// it('renders correctly secondary button', () => {
-//   const wrapper = shallow(<Button secondary>Secondary Button</Button>);
-
-//   expect(wrapper).toMatchSnapshot();
-// });
+it('Loading corrently renders a loading message', () => {
+  const wrapper = shallow(<Loading />);
+  expect(wrapper).toMatchSnapshot();
+});

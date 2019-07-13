@@ -29,7 +29,7 @@ interface Variables {
   orderBy: object;
 }
 
-const Locations: React.FunctionComponent = () => (
+const Locations: FunctionComponent = () => (
   <Query<Data, Variables>
     query={GET_LOCATIONS}
     variables={{
@@ -47,8 +47,8 @@ const Locations: React.FunctionComponent = () => (
         <LocationList
           locations={locations}
           onLoadMore={async () => {
-            offset = offset + 5;
             try {
+              offset = offset + 5;
               await fetchMore({
                 variables: { offset },
                 updateQuery: (prev, { fetchMoreResult }) => {
@@ -63,7 +63,7 @@ const Locations: React.FunctionComponent = () => (
               });
             } catch (err) {
               console.log('err');
-              // When the variables of <Query> changes while a fetchMore is still in progress, we get this error: ObservableQuery with this id does not exist: id on unmounted component, which is an open issue: https://github.com/apollographql/apollo-client/issues/4114
+              // When the variables of <Query> change while a fetchMore is still in progress, we get this error: ObservableQuery with this id does not exist: id on unmounted component, which is currently an open issue at: https://github.com/apollographql/apollo-client/issues/4114
             }
           }}
         />
